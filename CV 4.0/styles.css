@@ -1,0 +1,190 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Radio Canada Big", sans-serif;
+}
+
+body {
+  margin: 0px;
+  margin-top: 53px;
+}
+
+#quote {
+  background: #efbf6b;
+  padding: 10px;
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+  font-size: 1.3em;
+  border-bottom: #c98615 solid 3px;
+}
+
+cite {
+  font-family: "Dancing Script", cursive;
+  font-weight: 900;
+  font-size: 1.5em;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  border-bottom: #c98615 solid 3px;
+  background-color: #333;
+}
+
+nav {
+  overflow: hidden;
+  flex-grow: 2;
+
+  height: 50px;
+}
+
+header > h1 {
+  font-size: 2em;
+  color: #c98615;
+  flex-grow: 1;
+  margin: 0px;
+  align-self: center;
+  text-align: right;
+  padding: 5px;
+}
+
+nav > ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+nav > ul > li {
+  float: left;
+}
+
+nav > ul > li > a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+nav > ul > li > a:hover {
+  background-color: #111;
+  color: #c98615;
+}
+
+#portrait {
+  border-radius: 25px;
+  border: #c98615 solid 3px;
+}
+
+#about-me {
+  flex-basis: 500px;
+}
+
+#about-me h2 {
+  margin-top: 0px;
+}
+
+#about-me-description {
+  margin-right: 20px;
+}
+
+#skills {
+  width: 220px;
+  right: 120px;
+  border: #c98615 dotted 3px;
+  padding: 5px;
+  scroll-margin-top: 200px;
+}
+
+#skills h2,
+#skills ul {
+  margin: 0px;
+}
+
+#skills h2 {
+  margin-bottom: 19px;
+}
+
+#intro {
+  display: flex;
+  height: auto;
+  flex-direction: row;
+  margin: 0px 120px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+}
+
+#experience {
+  margin-top: 20px;
+  scroll-margin-top: 75px;
+}
+
+#experience h2 {
+  background-color: #efbf6b;
+  margin: 0px;
+  padding-left: 112px;
+  border-bottom: #c98615 solid 3px;
+  border-top: #c98615 solid 3px;
+}
+
+#experience-list,
+#list-education {
+  border-left: #c98615 dotted 3px;
+  padding: 4px 4px 0px;
+  margin: 0px 120px 40px;
+}
+
+.date {
+  font-size: 0.8rem;
+  margin: -16px 0px;
+}
+
+#education {
+  background-color: #efbf6b;
+  margin: 0px;
+  padding-left: 112px;
+  border-bottom: #c98615 solid 3px;
+  border-top: #c98615 solid 3px;
+  scroll-margin-top: 75px;
+}
+
+footer {
+  margin: 0px 0px -5px;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  margin: 0px;
+}
+
+footer p {
+  margin: 0px;
+}
+
+@media (max-width: 890px) {
+  header {
+    flex-direction: column-reverse;
+  }
+
+  #intro,
+  #experience-list,
+  #list-education {
+    margin: 0px 20px;
+  }
+
+  body {
+    margin-top: 100px;
+  }
+}
