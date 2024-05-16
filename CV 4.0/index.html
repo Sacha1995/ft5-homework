@@ -84,6 +84,7 @@
     <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
 
     <!-- stylesheets -->
+    <link rel="stylesheet" href="generics.css" />
     <link rel="stylesheet" href="./font.css" />
     <link rel="stylesheet" href="styles.css" />
 
@@ -101,12 +102,15 @@
       <nav>
         <ul>
           <li><a href="#about-me">About Me</a></li>
-          <li><a href="#skills">Skills</a></li>
+          <li class="skills"><a href="#skills">Skills</a></li>
           <li><a href="#experience">Experience</a></li>
           <li><a href="#education">Education</a></li>
         </ul>
       </nav>
-      <h1>Curriculum Vitae Sacha Uijlen</h1>
+      <h1>
+        <span class="cv-header">Curriculum Vitae</span>
+        <span class="name">Sacha Uijlen</span>
+      </h1>
     </header>
     <main>
       <p id="quote">
@@ -124,13 +128,15 @@
             it as efficiently and effectively as possible. I am very organized,
             structured, friendly, and calm.
           </p>
-          <p>
+          <p class="mail">
             Mail&#58;
             <a href="mailto:sacha-u@hotmail.com"
               >sacha&#45;u&#64;hotmail&#46;com</a
             >
           </p>
-          <p>Phone number&#58; <a href="tel:07123456789">07123456789</a></p>
+          <p class="phone">
+            Phone number&#58; <a href="tel:07123456789">07123456789</a>
+          </p>
         </div>
         <img
           id="portrait"

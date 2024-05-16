@@ -8,29 +8,31 @@ h3 {
   font-family: "Radio Canada Big", sans-serif;
 }
 
+h2,
+h3 {
+  margin: 0px;
+}
+
 body {
   margin: 0px;
-  margin-top: 53px;
+  margin-top: 100px;
 }
 
-#quote {
-  background: #efbf6b;
-  padding: 10px;
-  text-align: center;
-  font-family: "Dancing Script", cursive;
-  font-size: 1.3em;
-  border-bottom: #c98615 solid 3px;
+nav {
+  height: fit-content;
 }
 
-cite {
-  font-family: "Dancing Script", cursive;
-  font-weight: 900;
-  font-size: 1.5em;
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  height: fit-content;
+  align-content: flex-end;
 }
 
 header {
   display: flex;
-  flex-direction: row;
+  flex-direction: column-reverse;
   justify-content: space-between;
   position: fixed;
   top: 0;
@@ -38,23 +40,20 @@ header {
   z-index: 1;
   border-bottom: #c98615 solid 3px;
   background-color: #333;
+  height: fit-content;
 }
 
-nav {
-  overflow: hidden;
-  flex-grow: 2;
-
-  height: 50px;
+.cv-header {
+  font-size: 2rem;
 }
 
 header > h1 {
-  font-size: 2em;
+  font-size: 3rem;
   color: #c98615;
-  flex-grow: 1;
   margin: 0px;
-  align-self: center;
   text-align: right;
   padding: 5px;
+  height: fit-content;
 }
 
 nav > ul {
@@ -62,10 +61,6 @@ nav > ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-}
-
-nav > ul > li {
-  float: left;
 }
 
 nav > ul > li > a {
@@ -82,45 +77,57 @@ nav > ul > li > a:hover {
   color: #c98615;
 }
 
+#quote {
+  background: #efbf6b;
+  padding: 10px;
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+  font-size: 1.7rem;
+  border-bottom: #c98615 solid 3px;
+}
+
+cite {
+  font-family: "Dancing Script", cursive;
+  font-weight: 900;
+  font-size: 1.5em;
+}
+
+#intro,
+#experience-list,
+#list-education {
+  margin: 0px 40px;
+}
+
+.mail,
+#skills ul {
+  margin-bottom: 0px;
+}
+
 #portrait {
   border-radius: 25px;
   border: #c98615 solid 3px;
+  margin: 0px auto;
 }
 
 #about-me {
   flex-basis: 500px;
-}
-
-#about-me h2 {
-  margin-top: 0px;
-}
-
-#about-me-description {
-  margin-right: 20px;
+  scroll-margin-top: 75px;
 }
 
 #skills {
   width: 220px;
   right: 120px;
   border: #c98615 dotted 3px;
-  padding: 5px;
+  padding: 5px 15px;
   scroll-margin-top: 200px;
-}
-
-#skills h2,
-#skills ul {
-  margin: 0px;
-}
-
-#skills h2 {
-  margin-bottom: 19px;
+  margin: 0px auto;
+  margin-bottom: 20px;
 }
 
 #intro {
   display: flex;
   height: auto;
   flex-direction: row;
-  margin: 0px 120px;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -128,14 +135,14 @@ nav > ul > li > a:hover {
 }
 
 #experience {
-  margin-top: 20px;
   scroll-margin-top: 75px;
 }
 
-#experience h2 {
+#experience h2,
+#education {
   background-color: #efbf6b;
   margin: 0px;
-  padding-left: 112px;
+  padding-left: 30px;
   border-bottom: #c98615 solid 3px;
   border-top: #c98615 solid 3px;
 }
@@ -144,25 +151,15 @@ nav > ul > li > a:hover {
 #list-education {
   border-left: #c98615 dotted 3px;
   padding: 4px 4px 0px;
-  margin: 0px 120px 40px;
+  margin-bottom: 30px;
 }
 
 .date {
-  font-size: 0.8rem;
-  margin: -16px 0px;
-}
-
-#education {
-  background-color: #efbf6b;
-  margin: 0px;
-  padding-left: 112px;
-  border-bottom: #c98615 solid 3px;
-  border-top: #c98615 solid 3px;
-  scroll-margin-top: 75px;
+  font-size: 1.2rem;
+  margin: 0px 0px;
 }
 
 footer {
-  margin: 0px 0px -5px;
   background-color: #333;
   color: white;
   text-align: center;
@@ -173,18 +170,141 @@ footer p {
   margin: 0px;
 }
 
-@media (max-width: 890px) {
-  header {
-    flex-direction: column-reverse;
+@media screen and (max-width: 426px) {
+  body {
+    margin-top: 85px;
   }
 
+  .skills {
+    display: none;
+  }
+
+  .cv-header {
+    font-size: 2rem;
+    font-weight: 300;
+  }
+
+  header > h1 {
+    font-size: 2rem;
+  }
+
+  nav ul {
+    justify-content: space-between;
+  }
+
+  nav ul li {
+    flex-basis: 33%;
+  }
+
+  nav > ul > li > a {
+    padding-bottom: 14px;
+  }
+
+  #intro {
+    margin: 0px 20px;
+  }
+}
+
+@media screen and (min-width: 600px) {
   #intro,
   #experience-list,
   #list-education {
-    margin: 0px 20px;
+    margin: 0px 60px;
   }
 
+  .phone {
+    margin: 0px;
+  }
+
+  #experience h2,
+  #education {
+    padding-left: 50px;
+  }
+}
+
+@media screen and (min-width: 740px) {
   body {
-    margin-top: 100px;
+    margin: 0px;
+    margin-top: 97px;
+  }
+
+  header {
+    flex-direction: row;
+  }
+
+  header h1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding: 0px 5px 5px;
+  }
+
+  .name,
+  nav {
+    flex-basis: content;
+    flex-shrink: 0;
+  }
+
+  .name {
+    flex-shrink: 0;
+  }
+
+  .name,
+  .cv-header {
+    font-size: 3rem;
+    padding: 0px 10px;
+    align-self: flex-end;
+  }
+
+  .cv-header {
+    font-weight: 300;
+  }
+
+  nav ul {
+    margin-top: 40px;
+  }
+
+  #about-me {
+    flex-basis: 900px;
+  }
+
+  #portrait,
+  #skills {
+    margin-top: -42px;
+  }
+}
+
+@media screen and (min-width: 914px) {
+  body {
+    margin: 0px;
+    margin-top: 50px;
+  }
+
+  nav ul {
+    margin-top: 0px;
+  }
+
+  header h1 {
+    margin-top: 5px;
+  }
+}
+
+@media screen and (min-width: 980px) {
+  #about-me {
+    flex-basis: 500px;
+    align-self: flex-start;
+  }
+
+  #portrait,
+  #skills {
+    margin-top: 0px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #intro,
+  #experience-list,
+  #list-education {
+    margin: 0px 120px;
   }
 }
