@@ -15,26 +15,12 @@ h3 {
 
 body {
   margin: 0px;
-  margin-top: 100px;
-}
-
-nav {
-  height: fit-content;
-}
-
-nav ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  height: fit-content;
-  align-content: flex-end;
 }
 
 header {
   display: flex;
-  flex-direction: column-reverse;
   justify-content: space-between;
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 100%;
   z-index: 1;
@@ -44,35 +30,84 @@ header {
 }
 
 .cv-header {
-  font-size: 2rem;
+  font-size: 4vw;
+  font-weight: 300;
 }
 
 header > h1 {
-  font-size: 3rem;
+  font-size: 5vw;
   color: #c98615;
   margin: 0px;
   text-align: right;
-  padding: 5px;
+  height: fit-content;
+  align-self: center;
+  display: inline;
+}
+
+nav {
   height: fit-content;
 }
 
-nav > ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
+.menu {
+  width: fit-content;
+  position: relative;
 }
 
-nav > ul > li > a {
-  display: block;
+/* Makes the burger work */
+.burger:hover + ul,
+nav ul:hover {
+  display: inherit;
+  position: absolute;
+  background-color: #333;
+  border-radius: 3px;
+  left: 5px;
+  top: 50px;
+  animation: stretch 0.15s ease-in;
+}
+
+@keyframes stretch {
+  0% {
+    opacity: 0;
+    transform: translateY(-5%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.burger {
+  padding: 5px;
+  border: #efbf6b solid 2px;
+  border-radius: 5px;
+  margin: 5px 10px;
+}
+
+.line {
+  width: 35px;
+  height: 7px;
+  border-radius: 25px;
+  background-color: #c98615;
+  margin: 4px;
+}
+
+nav ul {
+  display: none;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 5px;
+}
+
+nav ul li {
+  padding: 10px;
+  font-size: 2rem;
   color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
 }
 
 /* Change the link color to #111 (black) on hover */
-nav > ul > li > a:hover {
+nav > ul > li:hover {
   background-color: #111;
   color: #c98615;
 }
@@ -170,42 +205,15 @@ footer p {
   margin: 0px;
 }
 
-@media screen and (max-width: 426px) {
-  body {
-    margin-top: 85px;
-  }
-
-  .skills {
+@media screen and (min-width: 600px) {
+  .burger {
     display: none;
   }
 
-  .cv-header {
-    font-size: 2rem;
-    font-weight: 300;
+  header {
+    flex-direction: column-reverse;
   }
 
-  header > h1 {
-    font-size: 2rem;
-  }
-
-  nav ul {
-    justify-content: space-between;
-  }
-
-  nav ul li {
-    flex-basis: 33%;
-  }
-
-  nav > ul > li > a {
-    padding-bottom: 14px;
-  }
-
-  #intro {
-    margin: 0px 20px;
-  }
-}
-
-@media screen and (min-width: 600px) {
   #intro,
   #experience-list,
   #list-education {
@@ -220,23 +228,56 @@ footer p {
   #education {
     padding-left: 50px;
   }
-}
 
-@media screen and (min-width: 740px) {
-  body {
-    margin: 0px;
-    margin-top: 97px;
-  }
-
-  header {
-    flex-direction: row;
-  }
-
-  header h1 {
+  nav ul {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    padding: 0px 5px 5px;
+    flex-direction: row;
+    justify-content: space-around;
+    height: fit-content;
+    margin: 0px;
+  }
+
+  nav ul li {
+    padding: 0px;
+    flex-grow: 1;
+    font-size: 2.5vw;
+  }
+
+  nav ul:hover {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    justify-content: space-around;
+    height: fit-content;
+    align-content: flex-end;
+    left: 0px;
+    top: 0px;
+    animation: none;
+  }
+
+  nav ul li:hover {
+    animation: fade 0.5s ease-in;
+  }
+
+  @keyframes fade {
+    0% {
+      opacity: 0;
+    }
+    20% {
+      opacity: 0.2;
+    }
+    40% {
+      opacity: 0.4;
+    }
+    60% {
+      opacity: 0.6;
+    }
+    80% {
+      opacity: 0.8;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 
   .name,
@@ -245,23 +286,44 @@ footer p {
     flex-shrink: 0;
   }
 
-  .name {
-    flex-shrink: 0;
+  nav > ul > li > a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+  }
+  nav > ul > li > a:hover {
+    color: #c98615;
   }
 
   .name,
   .cv-header {
-    font-size: 3rem;
     padding: 0px 10px;
-    align-self: flex-end;
+    align-self: center;
+  }
+}
+
+@media screen and (min-width: 740px) {
+  header {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+
+  nav ul li {
+    font-size: 2vw;
+  }
+
+  header h1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    flex-direction: row;
+    font-size: 3vw;
   }
 
   .cv-header {
-    font-weight: 300;
-  }
-
-  nav ul {
-    margin-top: 40px;
+    font-size: 2.5vw;
   }
 
   #about-me {
@@ -275,29 +337,44 @@ footer p {
 }
 
 @media screen and (min-width: 914px) {
-  body {
-    margin: 0px;
-    margin-top: 50px;
-  }
-
   nav ul {
     margin-top: 0px;
   }
 
   header h1 {
-    margin-top: 5px;
+    flex-basis: 55%;
+  }
+
+  #about-me {
+    flex-basis: 900px;
+  }
+
+  header nav {
+    flex-basis: 45%;
+  }
+
+  nav ul li {
+    font-size: 1.8vw;
   }
 }
 
 @media screen and (min-width: 980px) {
   #about-me {
-    flex-basis: 500px;
+    flex-basis: 40%;
     align-self: flex-start;
+  }
+
+  #about-me h2 {
+    margin-bottom: 4px;
   }
 
   #portrait,
   #skills {
     margin-top: 0px;
+  }
+
+  nav ul li {
+    font-size: 1.8rem;
   }
 }
 
@@ -306,5 +383,13 @@ footer p {
   #experience-list,
   #list-education {
     margin: 0px 120px;
+  }
+
+  header .name {
+    font-size: 3.7rem;
+  }
+
+  header .cv-header {
+    font-size: 3rem;
   }
 }
