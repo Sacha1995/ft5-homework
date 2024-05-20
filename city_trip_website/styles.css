@@ -1,0 +1,607 @@
+/* header */
+ul {
+  list-style-type: none;
+  margin-bottom: 0px;
+}
+
+header {
+  background-color: white;
+  border-bottom: #27888e solid 2px;
+  margin-bottom: 10px;
+}
+
+.logo {
+  width: 50px;
+  flex-shrink: 0;
+  height: auto;
+}
+
+.container > a {
+  order: 3;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: none;
+}
+
+.animation {
+  display: none;
+}
+
+/* navigation */
+.line {
+  width: 35px;
+  height: 7px;
+  border-radius: 25px;
+  background-color: #27888e;
+  margin: 4px;
+}
+
+.burger {
+  padding: 1px;
+  border: #27888e solid 2px;
+  border-radius: 5px;
+}
+
+nav ul li > ul {
+  visibility: hidden;
+  transition: all 0.2s ease-in;
+  position: absolute;
+  border: #27888e solid 2px;
+  left: 7px;
+  top: 45px;
+  color: black;
+  opacity: 0;
+  transform: translateY(-5%);
+}
+
+/* drop downs for burger menu */
+nav ul li:hover > ul,
+nav ul li:focus-within > ul {
+  display: inherit;
+  background-color: white;
+  border-radius: 3px;
+  border: #27888e solid 2px;
+  z-index: 1;
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+.uk ul,
+.world ul,
+.europe ul {
+  top: -2px;
+  left: 153px;
+  width: 154px;
+}
+
+.come-down li {
+  padding: 15px;
+  font-size: 2rem;
+  border-bottom: #27888e dashed 2px;
+  transition: all 0.2s ease-in-out;
+  padding: 5px;
+}
+
+.come-down li:last-child {
+  border-bottom: none;
+}
+
+.come-down li:hover,
+.come-down li:focus-within {
+  background-color: #abced2;
+  color: #27888e;
+}
+
+/* main */
+body {
+  font-family: gill sans, sans-serif;
+  background-color: #d9e9eb;
+}
+
+main {
+  display: block;
+  margin: 0px auto;
+  padding: 0px 20px;
+  max-width: 900px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 6vw;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+p {
+  font-size: 2rem;
+  text-align: center;
+}
+
+main ul li {
+  border-radius: 10px;
+  background: linear-gradient(
+    0deg,
+    rgba(83, 147, 151, 1) 0%,
+    rgba(171, 206, 210, 1) 69%
+  );
+  padding: 1rem;
+  border: #27888e solid 2px;
+  margin-bottom: 20px;
+}
+
+li a img {
+  margin: 0px auto;
+  border: #27888e solid 2px;
+  width: 75%;
+  border-radius: 10px;
+  margin-bottom: 6px;
+}
+
+.overlay {
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-100%);
+  transition: opacity 1s ease-in, visibility 1s ease-in, transform 1s ease-in;
+}
+
+.popular li {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay > a {
+  display: flex;
+  height: 100%;
+}
+
+.overlay-plane {
+  width: 20%;
+  border: none;
+  height: auto;
+  transform: rotate(20deg);
+  margin: 0px 5px 0px auto;
+  align-self: center;
+}
+
+.popular li:hover > .overlay {
+  opacity: 0.5;
+  visibility: visible;
+  transform: translateX(0%);
+  transition: opacity 1s ease-in, visibility 1s ease-in, transform 1s ease-in;
+}
+
+.in-uk li:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 96px 1px #febd626b;
+}
+
+.overlay2 {
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-100%);
+  transition: opacity 1s ease-in, visibility 1s ease-in, transform 1s ease-in;
+}
+
+.in-europe li {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay2 > a {
+  display: flex;
+  height: 100%;
+}
+
+.overlay-city {
+  width: 100%;
+  border: none;
+  height: 20%;
+  align-self: flex-end;
+}
+
+.in-europe li:hover > .overlay2 {
+  opacity: 0.5;
+  visibility: visible;
+  transform: translateY(0%);
+  transition: opacity 1s ease-in, visibility 1s ease-in, transform 1s ease-in;
+}
+
+main a {
+  margin: 0px auto;
+  font-size: 3rem;
+  color: black;
+  font-weight: 500;
+}
+
+.cities {
+  display: block;
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+/* animations cities */
+.New-York {
+  animation: glow 2s infinite;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 0px #fcaf3d;
+  }
+  50% {
+    text-shadow: 0 0 5px #fcaf3d;
+  }
+  100% {
+    text-shadow: 0 0 0px #fcaf3d;
+  }
+}
+
+.marrakech,
+.medellin {
+  animation: glow1 2s infinite;
+}
+
+@keyframes glow1 {
+  0% {
+    text-shadow: 0 0 0px #bd8a70;
+  }
+  50% {
+    text-shadow: 0 0 5px #bd8a70;
+  }
+  100% {
+    text-shadow: 0 0 0px #bd8a70;
+  }
+}
+
+.rome {
+  animation: glow2 2s infinite;
+}
+
+@keyframes glow2 {
+  0% {
+    text-shadow: 0 0 0px #d3a885;
+  }
+  50% {
+    text-shadow: 0 0 5px #d3a885;
+  }
+  100% {
+    text-shadow: 0 0 0px #d3a885;
+  }
+}
+
+.london {
+  animation: glow3 2s infinite;
+}
+
+@keyframes glow3 {
+  0% {
+    text-shadow: 0 0 0px #e4d3cb;
+  }
+  50% {
+    text-shadow: 0 0 5px #e4d3cb;
+  }
+  100% {
+    text-shadow: 0 0 0px #e4d3cb;
+  }
+}
+
+.edinburgh,
+.venice {
+  animation: glow4 2s infinite;
+}
+
+@keyframes glow4 {
+  0% {
+    text-shadow: 0 0 0px #e3935f;
+  }
+  50% {
+    text-shadow: 0 0 5px #e3935f;
+  }
+  100% {
+    text-shadow: 0 0 0px #e3935f;
+  }
+}
+
+.manchester {
+  animation: glow5 2s infinite;
+}
+
+@keyframes glow5 {
+  0% {
+    text-shadow: 0 0 0px #e35b46;
+  }
+  50% {
+    text-shadow: 0 0 5px #e35b46;
+  }
+  100% {
+    text-shadow: 0 0 0px #e35b46;
+  }
+}
+
+.oxford {
+  animation: glow9 2s infinite;
+}
+
+@keyframes glow9 {
+  0% {
+    text-shadow: 0 0 0px #f2db94;
+  }
+  50% {
+    text-shadow: 0 0 5px #f2db94;
+  }
+  100% {
+    text-shadow: 0 0 0px #f2db94;
+  }
+}
+
+.paris {
+  animation: glow6 2s infinite;
+}
+
+@keyframes glow6 {
+  0% {
+    text-shadow: 0 0 0px #3f80ce;
+  }
+  50% {
+    text-shadow: 0 0 5px #3f80ce;
+  }
+  100% {
+    text-shadow: 0 0 0px #3f80ce;
+  }
+}
+
+.amsterdam {
+  animation: glow7 2s infinite;
+}
+
+@keyframes glow7 {
+  0% {
+    text-shadow: 0 0 0px #d9872e;
+  }
+  50% {
+    text-shadow: 0 0 5px #d9872e;
+  }
+  100% {
+    text-shadow: 0 0 0px #d9872e;
+  }
+}
+
+.barcelona {
+  animation: glow8 2s infinite;
+}
+
+@keyframes glow8 {
+  0% {
+    text-shadow: 0 0 0px #04485d;
+  }
+  50% {
+    text-shadow: 0 0 5px #04485d;
+  }
+  100% {
+    text-shadow: 0 0 0px #04485d;
+  }
+}
+/* end of animations */
+
+section {
+  margin-bottom: 20px;
+}
+
+section ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+section ul li {
+  flex-basis: 95%;
+}
+
+/* footer */
+footer {
+  text-align: center;
+  background-color: white;
+  display: block;
+  width: 100;
+  border-top: #27888e solid 2px;
+}
+
+footer p {
+  padding: 3px;
+  margin: 0px;
+}
+
+/* Cities */
+
+@media (min-width: 480px) {
+  .animation img {
+    display: inherit;
+    height: 40px;
+    z-index: 0;
+  }
+
+  .animation {
+    display: flex;
+    position: relative;
+    flex-grow: 4;
+    align-self: flex-end;
+    justify-content: space-between;
+    margin: 0px 15px;
+    width: 273px;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+
+  .house {
+    transform: translateY(2px);
+  }
+
+  .animation p {
+    position: absolute;
+    font-family: "Poetsen One";
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .plane {
+    transform: translate(75px, -5px) rotate(45deg) scale(0.7);
+    animation: fly 3s ease-in-out;
+  }
+
+  @keyframes fly {
+    0% {
+      transform: translate(-69px, -5px) scale(0.7);
+    }
+    50% {
+      transform: translate(6px, -20px) rotate(22deg) scale(1);
+    }
+    100% {
+      transform: translate(75px, -5px) rotate(45deg) scale(0.7);
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  h1 {
+    font-size: 4.5vw;
+  }
+
+  section ul {
+    gap: 20px;
+  }
+
+  section ul li {
+    flex-basis: 45%;
+    margin-bottom: 0px;
+  }
+
+  main ul {
+    margin-bottom: 10px;
+  }
+
+  .animation {
+    display: none;
+  }
+
+  .burger {
+    display: none;
+  }
+
+  nav > ul > li > ul {
+    visibility: visible;
+    opacity: 1;
+    position: absolute;
+  }
+
+  nav {
+    position: relative;
+    width: 70%;
+    height: 30px;
+    z-index: 1;
+  }
+
+  .come-down {
+    display: flex;
+    justify-content: space-between;
+    top: 0px;
+    left: 0px;
+    border: none;
+    transform: translateY(0);
+    width: 100%;
+  }
+
+  .come-down > li {
+    border-bottom: none;
+    flex-grow: 2;
+  }
+
+  nav ul li:hover > ul,
+  nav ul li:focus-within > ul {
+    display: flex;
+    justify-content: space-between;
+    border: none;
+    transform: translateY(0);
+  }
+
+  .uk > ul,
+  .world > ul,
+  .europe > ul {
+    top: 40px !important;
+    left: 0px;
+    width: 154px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 860px) {
+  .animation {
+    display: inherit;
+  }
+
+  nav {
+    position: relative;
+    max-width: 550px;
+    height: 30px;
+    flex-shrink: 1;
+    width: 50%;
+  }
+
+  h1 {
+    font-size: 3vw;
+  }
+}
+
+@media (min-width: 1200px) {
+  section ul li {
+    flex-basis: 23%;
+  }
+
+  main {
+    max-width: 1250px;
+  }
+
+  .animation {
+    width: 450px;
+  }
+
+  .plane {
+    transform: translate(163px, -5px) rotate(45deg) scale(0.7);
+  }
+
+  @keyframes fly {
+    0% {
+      transform: translate(-175px, -5px) scale(0.7);
+    }
+    50% {
+      transform: translate(-6px, -20px) rotate(22deg) scale(1);
+    }
+    100% {
+      transform: translate(163px, -5px) rotate(45deg) scale(0.7);
+    }
+  }
+}
