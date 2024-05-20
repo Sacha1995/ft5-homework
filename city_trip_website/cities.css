@@ -1,0 +1,350 @@
+/*
+**************************
+          general
+**************************
+*/
+
+body {
+  background-color: #c4e0e3;
+}
+
+h1 {
+  font-size: 9vw;
+}
+/*
+************END***********
+*/
+
+/*
+**************************
+          carousel
+**************************
+*/
+.carousel-item img {
+  width: 80%;
+  margin: 0px auto;
+  border-radius: 10px;
+}
+
+.carousel h3,
+.carousel p {
+  text-shadow: 0px 0px 2px #000;
+}
+
+.carousel p {
+  display: none;
+}
+
+.carousel h3 {
+  margin-bottom: -20px;
+  font-size: 5vw;
+}
+
+.carousel {
+  margin-bottom: 20px;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  z-index: 0;
+}
+/*
+************END***********
+*/
+
+/*
+**************************
+  Information & video
+**************************
+*/
+h2 {
+  font-weight: 600;
+  margin-top: 20px;
+}
+.video-marrakech {
+  width: 60%;
+  margin: 0px auto;
+  height: auto;
+  border: #27888e solid 4px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+.container-info {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.info-ny {
+  max-width: 800px;
+  margin: 0px auto;
+}
+
+.aspect-ratio-container {
+  position: relative;
+  width: 90vw;
+  max-width: 600px;
+  margin: 0 auto 20px auto;
+  padding-bottom: 53.25%;
+  height: auto;
+}
+
+.aspect-ratio-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 600px;
+  max-height: 340px;
+  height: 100%;
+}
+/*
+************END***********
+*/
+
+/*
+**************************
+          form
+**************************
+*/
+.container-form {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+
+.button-form {
+  display: block;
+  background: #e18b43;
+  width: fit-content;
+  margin: 0px auto;
+  border-radius: 10px;
+  border: #9e612f solid 3px;
+  /* margin-bottom: 20px; */
+}
+
+.button-form:hover {
+  background: #abced2;
+  border: #27888e solid 3px;
+  color: #e18b43;
+}
+
+.button-form p {
+  padding: 10px;
+  font-weight: 600;
+  margin: 0px;
+}
+
+form {
+  display: block;
+  position: absolute;
+  background-color: white;
+  color: black;
+  left: 50%;
+  transform: translateX(-50%);
+  border: #e18b43 solid 2px;
+  background-color: #ffe6d1;
+  padding: 20px;
+  width: 90%;
+  max-width: 500px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50%, -5%);
+  z-index: 2; /*makes sure the layer is over video. Otherwise the form closed*/
+}
+
+.button-form:hover form,
+.button-form:focus-within form {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0%);
+  transition: all 0.5s ease-out;
+}
+
+form h3 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+form .form-select {
+  font-size: 1.6rem;
+}
+
+.col-sm-10 input {
+  font-size: 1.6rem;
+}
+
+#floatingTextarea {
+  font-size: 1.6rem;
+  height: 100px;
+}
+
+.amountpeople p,
+.duration p {
+  text-align: left;
+  margin-bottom: 0px;
+}
+
+form .btn {
+  margin: 0px auto 0px auto;
+  font-size: 1.6rem;
+  font-weight: 600;
+  background-color: white;
+}
+
+.amountpeople,
+.duration,
+#floatingTextarea,
+.col-sm-10 input,
+form .form-select,
+form h3 {
+  margin-bottom: 10px;
+}
+
+form > .submit {
+  border: green solid 2px;
+  color: green;
+  margin-bottom: 10px;
+}
+
+.reset {
+  border: red solid 2px;
+  color: red;
+}
+
+.submit:hover,
+.submit:focus-within {
+  background-color: green;
+  color: white;
+}
+
+.reset:hover,
+.reset:focus-within {
+  background-color: red;
+  color: white;
+}
+/*
+************END***********
+*/
+
+/*
+**************************
+      media query
+**************************
+*/
+@media (min-width: 600px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  .carousel {
+    z-index: -1;
+  }
+
+  .carousel-item img {
+    max-width: 500px;
+  }
+
+  .carousel-item p {
+    display: inherit;
+    margin-bottom: -20px;
+    font-size: 2rem;
+  }
+
+  .carousel-item h3 {
+    margin-bottom: 0px;
+    font-size: 3.5rem;
+  }
+
+  .container-info {
+    display: block;
+    max-width: 860px;
+    margin: 0px auto 20px auto;
+  }
+
+  .video-marrakech {
+    float: right;
+    margin: 5px;
+    margin-top: 42px;
+    width: 264px;
+  }
+
+  .info p {
+    text-align: left;
+  }
+
+  .container-check {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 700px) {
+  main {
+    margin: 0px 40px;
+  }
+}
+
+@media (min-width: 780px) {
+  .aspect-ratio-container {
+    width: 560px;
+    height: 315px;
+    padding: 0px;
+  }
+
+  .aspect-ratio-container iframe {
+    width: 560px;
+    height: 315px;
+  }
+}
+
+@media (min-width: 1000px) {
+  main {
+    margin: 0px auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  main h1 {
+    margin-bottom: 10px;
+  }
+
+  main h2 {
+    text-align: left;
+  }
+
+  .carousel-item img {
+    max-width: 650px;
+  }
+
+  .main-ny {
+    max-width: 1200px;
+  }
+
+  .info-ny {
+    max-width: 1200px;
+  }
+  .main-marrakech {
+    border-image-slice: 27 512 27 512;
+    border-image-width: 0px 45px 0px 45px;
+    border-image-outset: 0px 0px 0px 0px;
+    border-image-repeat: stretch space;
+    border-image-source: url(img/camel.png);
+  }
+
+  .main-ny {
+    padding: 0px 100px;
+    border-image-slice: 27 512 27 512;
+    border-image-width: 0px 45px 0px 45px;
+    border-image-outset: 0px 0px 0px 0px;
+    border-image-repeat: stretch space;
+    border-image-source: url(img/apple1.png);
+  }
+}
+/*
+************END***********
+*/
