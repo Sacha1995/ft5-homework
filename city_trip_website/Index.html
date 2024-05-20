@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>City trip planner</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="57x57"
+      href="Favicon/apple-touch-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="114x114"
+      href="Favicon/apple-touch-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="72x72"
+      href="Favicon/apple-touch-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="144x144"
+      href="Favicon/apple-touch-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="60x60"
+      href="Favicon/apple-touch-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="120x120"
+      href="Favicon/apple-touch-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="76x76"
+      href="Favicon/apple-touch-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="152x152"
+      href="Favicon/apple-touch-icon-152x152.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="Favicon/favicon-196x196.png"
+      sizes="196x196"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="Favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="Favicon/favicon-32x32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="Favicon/favicon-16x16.png"
+      sizes="16x16"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="Favicon/favicon-128.png"
+      sizes="128x128"
+    />
+    <meta name="application-name" content="&nbsp;" />
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="fonts.css" />
+    <link rel="stylesheet" href="generics.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <a href="#"
+          ><img
+            src="img/logo-name.svg"
+            alt="logo of world with plane"
+            class="logo"
+        /></a>
+        <nav>
+          <ul>
+            <li tabindex="0">
+              <div class="burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+              </div>
+              <ul class="come-down">
+                <li><a href="#">Home</a></li>
+                <li class="dropdown uk">
+                  <a href="#">United Kingdom</a>
+                  <ul>
+                    <li><a href="edinburgh.html">Edinburgh</a></li>
+                    <li><a href="london.html">London</a></li>
+                    <li><a href="manchester.html">Manchester</a></li>
+                    <li><a href="oxford.html">Oxford</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown europe">
+                  <a href="#">Europe</a>
+                  <ul>
+                    <li><a href="amsterdam.html">Amsterdam</a></li>
+                    <li><a href="barcelona.html">Barcelona</a></li>
+                    <li><a href="paris.html">Paris</a></li>
+                    <li><a href="rome.html">Rome</a></li>
+                    <li><a href="venice.html">Venice</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown world">
+                  <a href="#">World</a>
+                  <ul>
+                    <li><a href="Marrakech.html">Marrakech</a></li>
+                    <li><a href="Medellin.html">Medellin</a></li>
+                    <li><a href="New_York.html">New York</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <div class="animation">
+          <img src="img/house.png" alt="house silhouette" class="house" />
+          <img
+            src="img/plane.png"
+            alt="flying plane silhouette"
+            class="plane"
+          />
+          <p>City Planner</p>
+          <img src="img/skyline.png" alt="skyline of city" class="skyline" />
+        </div>
+      </div>
+    </header>
+    <main>
+      <h1>Welcome to the best city planner website</h1>
+      <section class="popular">
+        <h2>Popular City trips</h2>
+        <ul>
+          <li>
+            <div class="overlay">
+              <a href="New_York.html">
+                <img
+                  class="overlay-plane"
+                  src="img/plane.png"
+                  alt="small plane"
+              /></a>
+            </div>
+            <a href="New_York.html"
+              ><span class="cities New-York">New York</span>
+              <img src="img/New_York_200.jpg" alt="Skyline of New York" />
+              <p class="my-2">
+                With skyscraping sights, massive museums and fashion houses
+                galore, holidays to New York will keep you wide-eyed from dawn
+                to dusk.
+              </p></a
+            >
+          </li>
+          <li>
+            <div class="overlay">
+              <a href="Marrakech.html">
+                <img
+                  class="overlay-plane"
+                  src="img/plane.png"
+                  alt="small plane"
+              /></a>
+            </div>
+            <a href="Marrakech.html"
+              ><span class="cities marrakech">Marrakech</span>
+              <img src="img/Marrakech-400.jpg" alt="Marrakech" />
+              <p>
+                Marrakech is a lively city within a stunning mountain rage, with
+                a beautiful medina that will tickle the senses.
+              </p></a
+            >
+          </li>
+          <li>
+            <div class="overlay">
+              <a href="rome.html">
+                <img
+                  class="overlay-plane"
+                  src="img/plane.png"
+                  alt="small plane"
+              /></a>
+            </div>
+            <a href="rome.html"
+              ><span class="cities rome">Rome</span>
+              <img src="img/Rome_200.jpg" alt="Rome" />
+              <p>
+                A heady mix of haunting ruins, awe-inspiring art and vibrant
+                street life, Italy's hot-blooded capital is one of the world's
+                most romantic and charismatic cities.
+              </p></a
+            >
+          </li>
+          <li>
+            <div class="overlay">
+              <a href="medellin.html">
+                <img
+                  class="overlay-plane"
+                  src="img/plane.png"
+                  alt="small plane"
+              /></a>
+            </div>
+            <a href="medellin.html">
+              <span class="cities medellin">Medellin</span>
+              <img
+                src="img/Medellin_200.jpg"
+                alt="Medelling city in mountains"
+              />
+              <p>
+                Situated in a narrow valley, Medellín is a magical city. Also
+                known as the city of eternal spring, because of the yearround
+                lovely weather.
+              </p></a
+            >
+          </li>
+        </ul>
+      </section>
+      <section class="in-uk">
+        <h2>In the UK</h2>
+        <ul>
+          <li>
+            <a href="#"
+              ><span class="cities london">London</span>
+              <img src="img/London_200.jpg" alt="London" />
+              <p>
+                A city with a lot of culture and history and a lot of life. No
+                matter what you are looing for Londn has it too offer.
+              </p></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><span class="cities edinburgh">Edinburgh</span>
+              <img src="img/Edinburgh_200.jpg" alt="Edinburgh" />
+              <p>
+                Edinburgh is an unbeatable city, steeped in history, culture,
+                nature, architecture and constantly shifting northern light.
+              </p></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><span class="cities manchester">Manchester</span>
+              <img src="img/Manchester_200.jpg" alt="Manchester" />
+              <p>
+                Stadium tours, street parades and stunning heritage sites are
+                part of what makes Manchester a great destination.
+              </p></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><span class="cities oxford">Oxford</span>
+              <img src="img/Oxford-600.jpg" alt="Oxford" />
+              <p>
+                With its urban beauty and detailed history, it's no surprise
+                that Oxford is a top-quality city to visit.
+              </p></a
+            >
+          </li>
+        </ul>
+      </section>
+      <section class="in-europe">
+        <h2>In Europe</h2>
+        <ul>
+          <li>
+            <div class="overlay2">
+              <a href="paris.html">
+                <img
+                  class="overlay-city"
+                  src="img/city-skyline.jpg"
+                  alt="lineart of city ckyline"
+              /></a>
+            </div>
+            <a href="paris.html"
+              ><span class="cities paris">Paris</span>
+              <img src="img/Paris_200.jpg" alt="Paris" />
+              <p>
+                A city with unbelievable food and culture, plus stunning views
+                everywhere you turn.
+              </p></a
+            >
+          </li>
+          <li>
+            <div class="overlay2">
+              <a href="amsterdam.html">
+                <img
+                  class="overlay-city"
+                  src="img/city-skyline.jpg"
+                  alt="lineart of city ckyline"
+              /></a>
+            </div>
+            <a href="amterdam.html"
+              ><span class="cities amsterdam">Amsterdam</span>
+              <img src="img/Amsterdam _200.jpg" alt="Amsterdam" />
+              <p>
+                With over 800 years of history to discover, Amsterdam is rich in
+                fascinating attractions and sights.
+              </p></a
+            >
+          </li>
+          <li>
+            <div class="overlay2">
+              <a href="barcelona.html">
+                <img
+                  class="overlay-city"
+                  src="img/city-skyline.jpg"
+                  alt="lineart of city ckyline"
+              /></a>
+            </div>
+            <a href="barcelona.html"
+              ><span class="cities barcelona">Barcelona</span>
+              <img src="img/Barcelona_200.jpg" alt="Barcelona" />
+              <p>
+                Barcelona, the cosmopolitan capital of Spain&#39;s Catalonia
+                region, is known for its art and architecture.
+              </p></a
+            >
+          </li>
+          <li>
+            <div class="overlay2">
+              <a href="venice.html">
+                <img
+                  class="overlay-city"
+                  src="img/city-skyline.jpg"
+                  alt="lineart of city ckyline"
+              /></a>
+            </div>
+            <a href="venice.html"
+              ><span class="cities venice">venice</span>
+              <img src="img/Venice-600.jpg" alt="venice" />
+              <p>
+                Gondola cruises, beautiful bridges, world-class architecture. A
+                holiday to Venice isn't your typical city break.
+              </p></a
+            >
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <p><small>&copy; All rights reserved</small></p>
+    </footer>
+  </body>
+</html>
